@@ -26,7 +26,7 @@ return {
           floats = "dark", -- style for floating windows
         },
       })
-      -- vim.cmd.colorscheme("tokyonight")
+      -- PaintMeThePicture("tokyonight")
     end
   },
   {
@@ -42,7 +42,7 @@ return {
         },
       })
 
-      -- vim.cmd.colorscheme("catppuccin-mocha")
+      PaintMeThePicture()
     end
   },
   {
@@ -56,7 +56,7 @@ return {
         },
       })
 
-      PaintMeThePicture("rose-pine")
+      -- PaintMeThePicture("rose-pine")
     end
   }
 }
