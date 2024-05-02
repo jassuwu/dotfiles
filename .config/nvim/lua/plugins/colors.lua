@@ -42,7 +42,7 @@ return {
         },
       })
 
-      -- PaintMeThePicture()
+      PaintMeThePicture()
     end
   },
   {
@@ -56,7 +56,7 @@ return {
         },
       })
 
-      PaintMeThePicture("rose-pine")
+      -- PaintMeThePicture("rose-pine")
     end
   }
 }
