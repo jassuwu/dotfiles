@@ -82,6 +82,9 @@ plugins=(
 	zsh-autosuggestions
 )
 
+# zsh-autosuggestions
+export ZSH_AUTOSUGGEST_HISTORY_IGNORE="(reboot|rm *)"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,11 +112,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
+# p10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 ## CUSTOM ALIASES
 # Applications
