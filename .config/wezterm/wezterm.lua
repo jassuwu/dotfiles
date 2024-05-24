@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+-- needed only for xorg
 config.max_fps = 144
 
 config.font = wezterm.font('FiraCode Nerd Font')
