@@ -30,6 +30,7 @@ return {
         "lua_ls",
         "gopls",
         "clangd",
+        "elixirls"
       },
       automatic_installation = true,
       handlers = {
