@@ -6,5 +6,19 @@ return {
 
     "nvim-telescope/telescope.nvim",
   },
-  config = true
+  config = function ()
+   local neogit = require("neogit")
+    neogit.setup({
+      kind = "split",
+      signs = {
+        -- { CLOSED, OPENED }
+        section = { "", "" },
+        item = { "", "" },
+        hunk = { "", "" },
+      },
+      integrations = {
+        diffview = true,
+      },
+    })
+  end,
 }
