@@ -10,6 +10,7 @@ return {
     local neogit = require("neogit")
     neogit.setup({
       kind = "split",
+      -- needs nerd font to work correctly, comment out otherwise
       signs = {
         -- { CLOSED, OPENED }
         section = { "", "" },
