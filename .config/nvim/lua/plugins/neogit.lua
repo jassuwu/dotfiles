@@ -7,7 +7,7 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   config = function ()
-   local neogit = require("neogit")
+    local neogit = require("neogit")
     neogit.setup({
       kind = "split",
       signs = {
@@ -20,5 +20,7 @@ return {
         diffview = true,
       },
     })
+
+    vim.keymap.set("n", "<leader>g", neogit.open, {})
   end,
 }
