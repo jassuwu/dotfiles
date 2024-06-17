@@ -30,7 +30,9 @@ return {
         "lua_ls",
         "gopls",
         "clangd",
-        "elixirls"
+        "elixirls",
+        "astro",
+        "tailwindcss",
       },
       automatic_installation = true,
       handlers = {
