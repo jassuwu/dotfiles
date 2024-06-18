@@ -4,7 +4,11 @@ local config = wezterm.config_builder()
 -- needed only for xorg
 config.max_fps = 144
 
-config.font = wezterm.font('FiraCode Nerd Font')
+-- my usual
+-- config.font = wezterm.font('FiraCode Nerd Font')
+
+-- goofy ahh 💀
+config.font = wezterm.font('Comic Code Ligatures')
 
 config.color_scheme = "Rosé Pine (Gogh)"
 -- config.color_scheme = "Catppuccin Macchiatto"
