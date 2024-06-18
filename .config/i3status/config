@@ -9,6 +9,7 @@ order += "battery 1"
 order += "cpu_temperature 0"
 order += "memory"
 order += "load"
+order += "volume master"
 order += "tztime local"
 order += "tztime calcutta"
 
@@ -63,4 +64,11 @@ disk "/" {
 
 read_file uptime {
         path = "/proc/uptime"
+}
+
+volume master {
+    format = "🔉 %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
