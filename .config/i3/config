@@ -191,3 +191,8 @@ bar {
         position top
         padding 0 2px 0 0
 }
+
+
+# Brightnessctl bindings
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
