@@ -33,6 +33,7 @@ return {
         "elixirls",
         "astro",
         "tailwindcss",
+        "tsserver",
       },
       automatic_installation = true,
       handlers = {
