@@ -34,6 +34,7 @@ return {
         "astro",
         "tailwindcss",
         "tsserver",
+        "hls",
       },
       automatic_installation = true,
       handlers = {
@@ -75,6 +76,13 @@ return {
                 }
               }
             }
+          }
+        end,
+
+        ["tailwindcss"] = function ()
+          local lspconfig = require("lspconfig")
+          lspconfig.tailwindcss.setup {
+            root_dir = util.root_pattern("tailwind.config.js", "tailwind.config.ts")
           }
         end
       }
