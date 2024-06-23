@@ -132,3 +132,5 @@ alias vim="nvim"
 alias gs="git status"
 alias gpl="git pull"
 
+## HASKELL SETUP
+export PATH=$PATH:$HOME/.ghcup/bin
