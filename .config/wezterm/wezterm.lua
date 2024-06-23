@@ -48,4 +48,7 @@ config.window_padding = {
   bottom = 0,
 }
 
+-- drivin' me nuts
+config.audible_bell = "Disabled"
+
 return config
