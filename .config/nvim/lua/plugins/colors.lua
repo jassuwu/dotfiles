@@ -26,7 +26,7 @@ return {
           floats = "dark", -- style for floating windows
         },
       })
-       PaintMeThePicture("tokyonight")
+       -- PaintMeThePicture("tokyonight")
     end
   },
   {
@@ -56,7 +56,7 @@ return {
         },
       })
 
-      -- PaintMeThePicture("rose-pine")
+      PaintMeThePicture("rose-pine")
     end
   }
 }
