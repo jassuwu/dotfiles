@@ -196,3 +196,8 @@ bar {
 # Brightnessctl bindings
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
+
+# start picom
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/anime-girl-with-sword-red-desktop-wallpaper.jpg
