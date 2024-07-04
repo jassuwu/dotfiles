@@ -48,7 +48,7 @@ load {
 }
 
 cpu_temperature 0 {
-        format = "T: %degrees °C"
+        format = "🌡️%degrees °C"
         path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
@@ -68,6 +68,7 @@ read_file uptime {
 
 volume master {
     format = "🔉 %volume"
+    format_muted = "🔇"
     device = "default"
     mixer = "Master"
     mixer_idx = 0
