@@ -35,6 +35,7 @@ return {
         "tailwindcss",
         "tsserver",
         "hls",
+        "pyright",
       },
       automatic_installation = true,
       handlers = {
@@ -83,6 +84,22 @@ return {
           local lspconfig = require("lspconfig")
           lspconfig.tailwindcss.setup {
             root_dir = util.root_pattern("tailwind.config.js", "tailwind.config.ts")
+          }
+        end,
+
+        ["pyright"] = function ()
+          local lspconfig = require("lspconfig")
+          lspconfig.pyright.setup {
+            root_dir = util.root_pattern("pyproject.toml","setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git"),
+            single_file_support = true,
+            settings = {
+              python = {
+                analysis = {
+                  autoSearchPaths = true,
+                  useLibraryCodeForTypes = true,
+                }
+              },
+            }
           }
         end
       }
