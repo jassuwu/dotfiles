@@ -36,6 +36,7 @@ return {
         "tsserver",
         "hls",
         "pyright",
+        "clangd",
       },
       automatic_installation = true,
       handlers = {
