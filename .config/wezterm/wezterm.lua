@@ -1,6 +1,8 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+-- cuz wayland on nvidia sucks
+config.enable_wayland = false
 -- needed only for xorg
 config.max_fps = 144
 
