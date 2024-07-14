@@ -45,10 +45,10 @@ config.show_new_tab_button_in_tab_bar = false
 config.tab_max_width = 1024
 
 config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 0,
-  bottom = 0,
+  left = 6,
+  right = 6,
+  top = 6,
+  bottom = 6,
 }
 
 -- drivin' me nuts

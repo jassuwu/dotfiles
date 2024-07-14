@@ -134,3 +134,8 @@ alias gpl="git pull"
 
 ## HASKELL SETUP
 export PATH=$PATH:$HOME/.ghcup/bin
+
+
+if [ "$(tty)" = "/dev/tty1" ];then
+  exec Hyprland
+fi
