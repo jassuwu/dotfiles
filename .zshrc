@@ -120,6 +120,7 @@ export PATH=$PATH:$HOME/go/bin
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # NVM
 # Set up Node Version Manager
@@ -136,5 +137,5 @@ alias gpl="git pull"
 export PATH=$PATH:$HOME/.ghcup/bin
 
 ## Hyprland
-[[ ! -f ~/.config/zshrc.d/dots-hyprland.zsh ]] source ~/.config/zshrc.d/dots-hyprland.zsh
-[[ ! -f ~/.config/zshrc.d/auto-Hypr.zsh ]] source ~/.config/zshrc.d/auto-Hypr.zsh
+[[ ! -f ~/.config/zshrc.d/dots-hyprland.zsh ]] || source ~/.config/zshrc.d/dots-hyprland.zsh
+[[ ! -f ~/.config/zshrc.d/auto-Hypr.sh ]] || source ~/.config/zshrc.d/auto-Hypr.sh
