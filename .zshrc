@@ -79,13 +79,14 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	zsh-autosuggestions
 )
 
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HISTORY_IGNORE="(reboot|rm *)"
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
