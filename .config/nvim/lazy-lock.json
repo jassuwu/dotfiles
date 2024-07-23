@@ -10,7 +10,7 @@
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "fidget.nvim": { "branch": "main", "commit": "ef99df04a1c53a453602421bc0f756997edc8289" },
   "gitsigns.nvim": { "branch": "main", "commit": "47c8e3e571376b24de62408fd0c9d12f0a9fc0a3" },
-  "lazy.nvim": { "branch": "main", "commit": "eb4957442e3182f051b0ae11da32e06d22c190e3" },
+  "lazy.nvim": { "branch": "main", "commit": "839f9e78e78dc935b1188fb16583365991739c51" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "37a336b653f8594df75c827ed589f1c91d91ff6c" },
   "mason.nvim": { "branch": "main", "commit": "0950b15060067f752fde13a779a994f59516ce3d" },
   "neogit": { "branch": "master", "commit": "71eb98630b5cb2277636fdccc74a7358e910c01b" },
