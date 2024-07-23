@@ -3,7 +3,7 @@ general {
         interval = 5
 }
 
-order += "wireless wlo1"
+order += "wireless wlan0"
 order += "disk /"
 order += "battery 1"
 order += "cpu_temperature 0"
@@ -13,7 +13,7 @@ order += "volume master"
 order += "tztime local"
 order += "tztime calcutta"
 
-wireless wlo1 {
+wireless wlan0 {
         format_up = "W: (%quality at %essid, %bitrate) Leaked IP: %ip"
         format_down = "W: down"
 }
