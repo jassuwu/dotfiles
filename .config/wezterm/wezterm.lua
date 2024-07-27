@@ -12,6 +12,9 @@ config.max_fps = 144
 -- goofy ahh 💀
 config.font = wezterm.font('Comic Code Ligatures')
 
+-- 1:1 font baby
+-- config.font = wezterm.font('Mx437_IBM_BIOS')
+
 config.color_scheme = "Tokyo Night"
 -- config.color_scheme = "Rosé Pine (Gogh)"
 -- config.color_scheme = "Catppuccin Macchiatto"
