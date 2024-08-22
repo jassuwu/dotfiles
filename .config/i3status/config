@@ -59,7 +59,7 @@ memory {
 }
 
 disk "/" {
-        format = "Porn Folder: %free"
+        format = "Hentai Folder: %free"
 }
 
 read_file uptime {
