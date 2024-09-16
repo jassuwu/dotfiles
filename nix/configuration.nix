@@ -165,6 +165,7 @@
     transmission_4-gtk
     typescript-language-server
     unzip
+    wezterm
     wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
     wofi
     zenity
