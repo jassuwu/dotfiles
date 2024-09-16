@@ -34,9 +34,7 @@ return {
         "astro",
         "tailwindcss",
         "tsserver",
-        "hls",
         "pyright",
-        "clangd",
       },
       automatic_installation = true,
       handlers = {
