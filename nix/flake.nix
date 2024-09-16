@@ -13,9 +13,6 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Alacritty theme
-    alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
-
     # Templ
     templ.url = "github:a-h/templ";
 
@@ -37,7 +34,6 @@
     self,
     nixpkgs,
     home-manager,
-    alacritty-theme,
     templ,
     nixpkgs-unstable,
     ags,
@@ -54,9 +50,7 @@
     ];
 
     hosts = [
-      "itachi"
-      "karasu"
-      "chidori"
+      "nixmsi"
     ];
 
     forAllSystems = fn: nixpkgs.lib.genAttrs systems (system: fn {pkgs = import nixpkgs {inherit system;};});
@@ -87,7 +81,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.jass = import ./home/home.nix;
               home-manager.extraSpecialArgs = {inherit inputs;};
-	      home-manager.backupFileExtension = "old";
+	            home-manager.backupFileExtension = "old";
             }
           ];
         };

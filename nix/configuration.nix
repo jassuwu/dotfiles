@@ -31,7 +31,6 @@
       outputs.overlays.additions
       outputs.overlays.unstable
       inputs.templ.overlays.default
-      inputs.alacritty-theme.overlays.default
 
       # You can also add overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
@@ -79,7 +78,7 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    (nerdfonts.override {fonts = ["FiraCode"];})
     openmoji-color
   ];
 
@@ -140,15 +139,12 @@
     hyprpicker
     inputs.zen-browser.packages."${system}".specific
     jq
-    kanata
     kubectl
     kubectx
     kustomize
     lua-language-server
     mako # notification system developed by swaywm maintainer
     mm-common
-    my-helmfile
-    my-kubernetes-helm
     neovim
     nil
     nwg-look

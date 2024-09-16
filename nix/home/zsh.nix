@@ -20,9 +20,6 @@
     export PATH="$HOME/go/bin:$BUN_INSTALL/bin:$PATH"
 
     bindkey -e
-
-    [[ ! -f ${./p10k.zsh} ]] || source ${./p10k.zsh}
-
     # disable sort when completing `git checkout`
     zstyle ':completion:*:git-checkout:*' sort false
     # set descriptions format to enable group support

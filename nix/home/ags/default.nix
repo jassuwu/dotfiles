@@ -8,7 +8,6 @@
   ];
 
   home.packages = with pkgs; [
-    bun
     dart-sass
     fd
     brightnessctl

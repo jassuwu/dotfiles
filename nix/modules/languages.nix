@@ -4,6 +4,7 @@
     gcc
     unstable.go_1_22
     nodejs
+    bun
     rustup
     yarn
     gofumpt

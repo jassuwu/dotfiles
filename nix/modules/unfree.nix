@@ -6,7 +6,7 @@
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) (
       map lib.getName [
-        pkgs.discord
+        pkgs.vesktop
         pkgs.unstable.keymapp
         pkgs.steam
         pkgs.steam-run
@@ -17,7 +17,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    discord
+    vesktop
     unstable.keymapp
   ];
 }

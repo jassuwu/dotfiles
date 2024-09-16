@@ -7,13 +7,13 @@
       ''gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"   # for GTK3 apps''
       ''gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"   # for GTK4 apps''
       ''gsettings set org.gnome.desktop.interface cursor-theme "Banana-Catppuccin-Mocha"''
-      ''gsettings set org.gnome.desktop.interface cursor-size 96''
+      ''gsettings set org.gnome.desktop.interface cursor-size 64''
     ];
     xwayland = {
       force_zero_scaling = true;
     };
     general = {
-      gaps_out = 16;
+      gaps_out = 8;
     };
     input = {
       follow_mouse = 1;
@@ -27,8 +27,8 @@
     };
     env = [
       "QT_QPA_PLATFORMTHEME,qt6ct"
-      "HYPRCURSOR_SIZE,96"
-      "XCURSOR_SIZE,96"
+      "HYPRCURSOR_SIZE,64"
+      "XCURSOR_SIZE,64"
     ];
     monitor = [
       ", preferred, auto, 1"
@@ -48,9 +48,9 @@
     ];
     bind =
       [
-        "$mod, Return, exec, alacritty"
+        "$mod, Return, exec, wezterm"
         "$mod, Q, killactive"
-        "$mod, W, exec, zen-browser"
+        "$mod, W, exec, zen"
         "$mod, E, exec, nautilus"
         "$mod, V, togglefloating"
         "$mod, R, exec, wofi --show drun"
