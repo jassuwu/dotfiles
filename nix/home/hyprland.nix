@@ -13,7 +13,8 @@
       force_zero_scaling = true;
     };
     general = {
-      gaps_out = 8;
+      gaps_out = 10;
+      gaps_in = 5;
     };
     input = {
       follow_mouse = 1;
@@ -46,6 +47,16 @@
       "fadeOut,1,10,easeInCubic"
       "workspaces,1,4,easeInOutCubic,slide"
     ];
+    bindl = [
+        "Alt ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle"
+        ",XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
+    ];
+    bindle = [
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+    ];
     bind =
       [
         "$mod, Return, exec, wezterm"
@@ -63,10 +74,11 @@
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
-        "$mod, h, movefocus, l"
-        "$mod, l, movefocus, r"
-        "$mod, k, movefocus, u"
-        "$mod, j, movefocus, d"
+        "$mod SHIFT, left, movewindow, l"
+        "$mod SHIFT, right, movewindow, r"
+        "$mod SHIFT, up, movewindow, u"
+        "$mod SHIFT, down, movewindow, d"
+        "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | swappy -f -"
       ]
       ++ (
         builtins.concatLists (builtins.genList (
