@@ -13,6 +13,7 @@ in {
 
   home.username = "jass";
   home.homeDirectory = "/home/jass";
+  home.stateVersion = "24.11";
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
@@ -21,18 +22,39 @@ in {
     name = "Banana-Catppuccin-Mocha";
   };
 
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+    configFile.nvim.source = mkOutOfStoreSymlink "/home/jass/dotfiles/.config/nvim";
+  };
 
-  xdg.configFile.nvim.source = mkOutOfStoreSymlink "/home/jass/dotfiles/.config/nvim";
+  gtk = {
+    enable = true;
+    theme = {
+      name = "rose-pine";
+      package = pkgs.rose-pine-gtk-theme;
+    };
+    iconTheme = {
+      name = "rose-pine";
+      package = pkgs.rose-pine-icon-theme;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk3";
+    style.name = "adwaita-gtk";
+  };
 
   dconf = {
     enable = true;
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-light";
   };
 
-  home.stateVersion = "24.11";
-
   programs = {
+    atuin.enable = true;
     tmux = import ./tmux.nix {inherit pkgs;};
     zsh = import ./zsh.nix {inherit config pkgs;};
     neovim = import ./neovim.nix {inherit config pkgs;};
@@ -40,15 +62,6 @@ in {
     zoxide = import ./zoxide.nix {inherit pkgs;};
     fzf = import ./fzf.nix {inherit pkgs;};
     oh-my-posh = import ./oh-my-posh.nix {inherit pkgs;};
-  };
-
-  programs.atuin.enable = true;
-
-  gtk = {
-    enable = true;
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
   };
 
   wayland.windowManager = {

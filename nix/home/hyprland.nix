@@ -68,6 +68,7 @@
         "$mod, P, pseudo"
         "$mod, J, togglesplit"
         "$mod, T, togglegroup"
+        ''$mod, I, exec, XDG_CURRENT_DESKTOP="gnome" gnome-control-center''
         "$mod+ALT, J, changegroupactive, f"
         "$mod+ALT, K, changegroupactive, f"
         "$mod, left, movefocus, l"

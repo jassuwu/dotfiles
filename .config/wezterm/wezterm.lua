@@ -9,7 +9,7 @@ config.font = wezterm.font('FiraCode Nerd Font')
 config.font_size = 16.0
 
 config.color_scheme = "Rosé Pine (Gogh)"
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1
 
 config.colors = {
   tab_bar = {

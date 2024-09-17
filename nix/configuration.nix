@@ -122,7 +122,6 @@
     banana-cursor
     banana-cursor-dreams
     bash
-    calibre
     clickgen
     dotool
     eza

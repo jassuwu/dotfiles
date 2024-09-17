@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    gnome.networkmanager-openvpn
-    gnome.gnome-shell-extensions
+    networkmanager-openvpn
+    gnome-shell-extensions
+    gnome-control-center
     gnomeExtensions.tiling-assistant
     gnomeExtensions.window-calls
   ];
