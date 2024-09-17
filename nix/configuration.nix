@@ -14,6 +14,7 @@
     ./modules/messaging.nix
     ./modules/unfree.nix
     ./modules/video.nix
+    ./modules/nvidia.nix
   ];
 
   nix = {
