@@ -1,3 +1,3 @@
-# the dotties
+# the flakes and dots
 
-managed with [GNU Stow](https://www.gnu.org/software/stow/)
+managed with [NixOS](https://nixos.org/explore/)
