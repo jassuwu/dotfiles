@@ -130,6 +130,7 @@ source /usr/share/nvm/init-nvm.sh
 ## CUSTOM ALIASES
 # Applications
 alias vim="nvim"
+alias vi="nvim"
 # git
 alias gs="git status"
 alias gpl="git pull"
