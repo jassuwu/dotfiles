@@ -6,6 +6,8 @@ config.enable_wayland = false
 -- needed only for xorg
 config.max_fps = 144
 
+config.font_size = 14.0
+
 -- my usual
 -- config.font = wezterm.font('FiraCode Nerd Font')
 
@@ -15,8 +17,8 @@ config.font = wezterm.font('Comic Code Ligatures')
 -- 1:1 font baby
 -- config.font = wezterm.font('Mx437_IBM_BIOS')
 
-config.color_scheme = "Tokyo Night"
--- config.color_scheme = "Rosé Pine (Gogh)"
+-- config.color_scheme = "Tokyo Night"
+config.color_scheme = "Rosé Pine (Gogh)"
 -- config.color_scheme = "Catppuccin Macchiatto"
 config.window_background_opacity = 0.9
 
