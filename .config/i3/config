@@ -16,6 +16,32 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 9
 
+# set primary Rosé Pine colorscheme colors
+set $base           #191724
+set $surface        #1f1d2e
+set $overlay        #26233a
+set $muted          #6e6a86
+set $subtle         #908caa
+set $text           #e0def4
+set $love           #eb6f92
+set $gold           #f6c177
+set $rose           #ebbcba
+set $pine           #31748f
+set $foam           #9ccfd8
+set $iris           #c4a7e7
+set $highlightlow   #21202e
+set $highlightmed   #403d52
+set $highlighthigh  #524f67
+
+# Theming border and Windows --------------
+# target                 title     bg    text   indicator  border
+client.focused           $rose     $base $text  $rose
+client.focused_inactive  $text     $base $text  $subtle
+client.unfocused         $text     $base $text  $overlay   $overlay
+client.urgent            $text     $base $text  $love      $love
+client.placeholder       $base     $base $text  $overlay   $overlay
+client.background        $base
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -204,10 +230,25 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        i3bar_command i3bar --transparency
-        status_command i3status --config ~/.config/i3/i3status.conf
-        position bottom
-        padding 0 2px 0 0
+    i3bar_command i3bar --transparency
+    status_command i3status --config ~/.config/i3/i3status.conf
+    position bottom
+    padding 0 2px 0 0
+    tray_padding 1
+    strip_workspace_numbers yes
+    separator_symbol "|"
+
+    colors {
+        background         $base
+        statusline         $text
+        focused_statusline $text
+        active_workspace   $base $pine $rose       # Active workspace color
+        focused_separator  $base
+        focused_workspace  $base $rose $pine       # Focused workspace color
+        inactive_workspace $overlay $muted $text   # Updated inactive workspace color
+        urgent_workspace   $base $base $love       # Urgent workspace color
+        binding_mode       $base $base $surface
+    }
 }
 
 
