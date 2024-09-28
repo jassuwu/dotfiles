@@ -218,7 +218,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # start picom
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/chainsaw-man-power-red-ultrawide-wallpaper-4k.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/chainsaw-man-power-red-ultrawide-wallpaper-4k.jpg
 
 
 # custom style changes
