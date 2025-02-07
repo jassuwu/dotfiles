@@ -14,6 +14,14 @@ return {
         enable = true
       },
 
+      ensure_installed = {
+        "lua",
+        "javascript",
+        "typescript",
+        "tsx",
+        "go",
+      },
+
       highlight = {
         -- `false` will disable the whole extension
         enable = true,
