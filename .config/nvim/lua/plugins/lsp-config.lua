@@ -28,13 +28,20 @@ return {
     require("mason-lspconfig").setup({
       ensure_installed = {
         "lua_ls",
+
         "gopls",
+
         "clangd",
+
         "elixirls",
+
+        "ts_ls",
         "tailwindcss",
-        "tsserver",
+        "eslint",
+        -- prettierd doesn't get installed for some reason. manually install it with Mason.
+        -- "prettierd",
+
         "pyright",
-        "clangd",
       },
       automatic_installation = true,
       handlers = {
@@ -83,6 +90,13 @@ return {
           local lspconfig = require("lspconfig")
           lspconfig.tailwindcss.setup {
             root_dir = util.root_pattern("tailwind.config.js", "tailwind.config.ts")
+          }
+        end,
+
+        ["eslint"] = function ()
+          local lspconfig = require("lspconfig")
+          lspconfig.eslint.setup {
+            root_dir = util.root_pattern("eslint.config.js", "eslint.config.ts", "eslint.config.mjs", "eslint.config.cjs", "eslint.config.mts", "eslint.config.cts")
           }
         end,
 
