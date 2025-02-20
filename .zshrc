@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,14 +79,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HISTORY_IGNORE="(reboot|rm *)"
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
@@ -114,16 +114,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# golang setup
+export PATH=$PATH:$HOME/go/bin
+
 # p10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # NVM
 # Set up Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+source /usr/share/nvm/init-nvm.sh
 
 ## CUSTOM ALIASES
 # Applications
@@ -133,9 +135,5 @@ alias vi="nvim"
 alias gs="git status"
 alias gpl="git pull"
 
-# bun completions
-[ -s "/Users/jass/.bun/_bun" ] && source "/Users/jass/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+## HASKELL SETUP
+export PATH=$PATH:$HOME/.ghcup/bin
