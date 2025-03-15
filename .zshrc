@@ -127,13 +127,21 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
 
+## HASKELL SETUP
+export PATH=$PATH:$HOME/.ghcup/bin
+
 ## CUSTOM ALIASES
 # Applications
 alias vim="nvim"
 alias vi="nvim"
-# git
-alias gs="git status"
-alias gpl="git pull"
-
-## HASKELL SETUP
-export PATH=$PATH:$HOME/.ghcup/bin
+#
+## AUTORUNS
+# fastfetch - to display the sweet sweet ascii art
+# Only run fastfetch if:
+# 1. The fastfetch command exists in the system
+# 2. We're currently in the home directory (~)
+# This prevents errors if fastfetch isn't installed and only shows the system info
+# when we first open a terminal (which typically starts in ~)
+if command -v fastfetch >/dev/null 2>&1 && [[ "$PWD" == "$HOME" ]]; then
+  fastfetch --logo-type auto --separator ":" --color-keys blue --logo-width 40 --pipe false
+fi
