@@ -1,5 +1,6 @@
 {
   "LuaSnip": { "branch": "master", "commit": "5271933f7cea9f6b1c7de953379469010ed4553a" },
+  "areyoulockedin.nvim": { "branch": "main", "commit": "04628c62479a944fccda3820e7a78589d5e7945f" },
   "auto-pairs": { "branch": "master", "commit": "39f06b873a8449af8ff6a3eee716d3da14d63a76" },
   "catppuccin": { "branch": "main", "commit": "fa42eb5e26819ef58884257d5ae95dd0552b9a66" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
