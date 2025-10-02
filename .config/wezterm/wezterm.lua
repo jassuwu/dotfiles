@@ -20,7 +20,7 @@ config.font = wezterm.font('Comic Code Ligatures')
 -- config.color_scheme = "Tokyo Night"
 config.color_scheme = "Rosé Pine (Gogh)"
 -- config.color_scheme = "Catppuccin Macchiatto"
-config.window_background_opacity = 0.01
+config.window_background_opacity = 0.8
 config.macos_window_background_blur = 10
 
 config.colors = {
