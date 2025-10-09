@@ -37,9 +37,6 @@ return {
 
         "ts_ls",
         "tailwindcss",
-        "eslint",
-        -- prettierd doesn't get installed for some reason. manually install it with Mason.
-        -- "prettierd",
 
         "pyright",
       },
