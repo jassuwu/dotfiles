@@ -154,3 +154,9 @@ export PATH=$PATH:/usr/local/go/bin
 if command -v fastfetch >/dev/null 2>&1 && [[ "$PWD" == "$HOME" ]]; then
   fastfetch --logo-type auto --separator ":" --color-keys blue --logo-width 40 --pipe false
 fi
+
+# openssh
+export PATH="/opt/homebrew/opt/openssh/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
