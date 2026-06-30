@@ -51,7 +51,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["T", "B", "C", "O", "F", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+persistent-workspaces = ["B", "C", "T", "O", "F", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -87,15 +87,15 @@ on-mode-changed = []
 # Auto-assign apps to workspaces when windows are detected
 # See: https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callback
 [[on-window-detected]]
-    if.app-id = 'com.github.wez.wezterm'
-    run = 'move-node-to-workspace T'
-
-[[on-window-detected]]
     if.app-id = 'company.thebrowser.Browser'
     run = 'move-node-to-workspace B'
 
 [[on-window-detected]]
-    if.app-id = 'com.todesktop.230313mzl4w4u92'
+    if.app-id = 'com.mitchellh.ghostty'
+    run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+    if.app-id = 'com.openai.codex'
     run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
@@ -167,12 +167,12 @@ on-mode-changed = []
     alt-shift-equal = 'resize smart +50'
 
     # App-specific workspaces (switch to workspace + launch app)
-    # T = Terminal (WezTerm)
-    alt-t = ['workspace T', 'exec-and-forget open -a /Applications/WezTerm.app']
     # B = Browser (Arc)
     alt-b = ['workspace B', 'exec-and-forget open -a /Applications/Arc.app']
-    # C = Code (Cursor)
-    alt-c = ['workspace C', 'exec-and-forget open -a /Applications/Cursor.app']
+    # C = Codex
+    alt-c = ['workspace C', 'exec-and-forget open -a /Applications/Codex.app']
+    # T = Terminal (Ghostty)
+    alt-t = ['workspace T', 'exec-and-forget open -a /Applications/Ghostty.app']
     # O = Obsidian
     alt-o = ['workspace O', 'exec-and-forget open -a /Applications/Obsidian.app']
     # F = Finder
@@ -192,9 +192,9 @@ on-mode-changed = []
     alt-0 = 'workspace 10'
 
     # Move windows to app-specific workspaces
-    alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
     alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
     alt-shift-c = 'move-node-to-workspace C --focus-follows-window'
+    alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
     alt-shift-o = 'move-node-to-workspace O --focus-follows-window'
     alt-shift-f = 'move-node-to-workspace F --focus-follows-window'
 
@@ -231,4 +231,3 @@ on-mode-changed = []
     alt-shift-l = ['join-with right', 'mode main']
 
 [mode.apps.binding]
-    alt-enter = ['exec-and-forget open -a /Applications/WezTerm.app', 'mode main']
