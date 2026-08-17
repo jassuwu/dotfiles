@@ -160,3 +160,11 @@ export PATH="/opt/homebrew/opt/openssh/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Claude Code
+export PATH="$HOME/.local/bin:$PATH"
+
+# Machine-local overrides. This file is not in git, so Mac-only PATH
+# entries, SDK roots, and one-off installer blocks live there instead
+# of leaking into every machine that stows this .zshrc.
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
