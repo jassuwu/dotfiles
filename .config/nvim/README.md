@@ -93,7 +93,7 @@ A missing server is a missing binary on `$PATH`. Never `:MasonInstall`.
 
 ```
 brew:   lua-language-server gopls rust-analyzer tree-sitter-cli fd stylua gofumpt \
-        goimports taplo marksman shfmt ruff clang-format
+        goimports taplo marksman shfmt ruff clang-format jdtls
 npm -g: @vtsls/language-server @tailwindcss/language-server \
         vscode-langservers-extracted @biomejs/biome prettier basedpyright
 ```
@@ -108,6 +108,22 @@ while still reporting a successful download.
 `rustfmt` lives in `~/.cargo/bin`. `lua/options.lua` prepends that to `$PATH`
 so Ghostty does not have to source cargo first.
 
+`jdtls` is the one server that is not self-contained. It needs two things brew
+does not give it, both wired up in `after/lsp/jdtls.lua`, and both **resolved,
+not pinned** — this repo is shared between machines with different setups:
+
+- **A JDK 21+ to run on.** The work machine has sdkman, where `current` is
+  Java 8 because the Nium services still build on it; this one has Homebrew's
+  `openjdk@21` and no sdkman. The override globs sdkman for the newest JDK >= 21
+  and falls back to the Homebrew keg. It goes through `cmd_env`, so the shell's
+  `java` is left alone.
+- **`lombok.jar` as a `-javaagent`.** Without it every generated getter, setter
+  and builder resolves as undefined. The jar is not in the formula; it lives at
+  `~/.local/share/java/lombok.jar` and is only wired in if it is actually there.
+  It is passed via `vim.env.JDTLS_JVM_ARGS`, not `cmd_env`: nvim-lspconfig
+  expands that variable with `os.getenv` while building argv, in this process,
+  so a `cmd_env` entry is read too late and the agent is silently dropped.
+
 Old Mason/lazy data is leftover and unused:
 
 ```
@@ -115,7 +131,8 @@ rm -rf ~/.local/share/nvim/lazy ~/.local/share/nvim/mason
 ```
 
 Do not delete all of `~/.local/share/nvim`. That also holds shada, undo, and
-the new `site/pack` plugins.
+the new `site/pack` plugins. `lombok.jar` was salvaged out of the Mason tree
+before it went, and now lives outside nvim's data dir entirely.
 
 ## Adding a language
 
