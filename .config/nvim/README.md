@@ -33,6 +33,9 @@ Not oversights — do not re-add them:
   the move to Ghostty + Aerospace. Workspace switching lives in Aerospace now.
 - `<leader>pv` duplicated `-`. One action, one key.
 - `<C-j>` / `<C-k>` walked the quickfix list. Core does that with `[q` / `]q`.
+- A `BufWritePre` that stripped trailing whitespace. Every filetype with a
+  formatter already does that, so the autocmd only ever touched files
+  deliberately left unformatted, at the cost of diff noise in shared repos.
 
 ## Maps that moved
 

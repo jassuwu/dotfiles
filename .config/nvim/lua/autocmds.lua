@@ -8,20 +8,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Strip trailing whitespace on save without moving the cursor or clobbering `/`.
--- Skip non-modifiable buffers (checkhealth, help, oil preview, etc.).
-vim.api.nvim_create_autocmd('BufWritePre', {
-  group = augroup,
-  callback = function(ev)
-    if not vim.bo[ev.buf].modifiable then
-      return
-    end
-    local view = vim.fn.winsaveview()
-    vim.cmd([[keeppatterns %s/\s\+$//e]])
-    vim.fn.winrestview(view)
-  end,
-})
-
 -- Reopen a file at the position you left it.
 vim.api.nvim_create_autocmd('BufReadPost', {
   group = augroup,
