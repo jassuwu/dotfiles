@@ -40,8 +40,6 @@ o.splitbelow = true
 o.splitright = true
 o.laststatus = 3 -- one global statusline, not one per split
 o.termguicolors = true
-o.guicursor = '' -- always a block cursor
-o.colorcolumn = '80'
 o.confirm = true
 
 -- Border for ALL floating windows (hover, signature, diagnostics) in one place.

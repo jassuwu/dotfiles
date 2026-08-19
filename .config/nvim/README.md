@@ -36,6 +36,8 @@ Not oversights — do not re-add them:
 - A `BufWritePre` that stripped trailing whitespace. Every filetype with a
   formatter already does that, so the autocmd only ever touched files
   deliberately left unformatted, at the cost of diff noise in shared repos.
+- `colorcolumn` and a forced block `guicursor`, both carried from the 2023
+  config with no reason beyond having been there.
 
 ## Maps that moved
 
