@@ -17,8 +17,8 @@ Still here, just thinner: format on save, git hunks, find/grep, file tree, rose-
 
 | Key | Does |
 | --- | --- |
-| `<C-p>` | find files (fzf-lua, was telescope) |
-| `<leader>ff` | live grep |
+| `<C-p>` or `<leader>ff` | find files (fzf-lua, was telescope) |
+| `<leader>fg` | live grep |
 | `-` | parent directory (oil, was netrw) |
 | `<leader>f` | format |
 | `<leader>s` | replace word under cursor |

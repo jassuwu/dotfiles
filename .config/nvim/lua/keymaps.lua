@@ -15,10 +15,11 @@ map('n', 'gd', vim.lsp.buf.definition, { desc = 'LSP: definition' })
 -- File explorer: open the parent directory as an editable buffer.
 map('n', '-', '<cmd>Oil<cr>', { desc = 'Open parent directory' })
 
--- Pickers. `<C-p>` / `<leader>ff` match the old telescope maps.
+-- Pickers. <leader>f* is the family; <C-p> is the one alias, for reflex.
 local fzf = require('fzf-lua')
 map('n', '<C-p>', fzf.files, { desc = 'Find files' })
-map('n', '<leader>ff', fzf.live_grep, { desc = 'Live grep' })
+map('n', '<leader>ff', fzf.files, { desc = 'Find files' })
+map('n', '<leader>fg', fzf.live_grep, { desc = 'Live grep' })
 map('n', '<leader>fb', fzf.buffers, { desc = 'Buffers' })
 map('n', '<leader>fh', fzf.helptags, { desc = 'Help tags' })
 map('n', '<leader>fd', fzf.diagnostics_workspace, { desc = 'Diagnostics' })
