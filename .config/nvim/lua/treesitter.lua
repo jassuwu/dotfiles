@@ -11,7 +11,7 @@ local ensure = {
   'lua', 'vim', 'vimdoc', 'query',
   'c', 'cpp',
   'go', 'gomod', 'gowork', 'gosum',
-  'python', 'rust',
+  'python', 'rust', 'java',
   'javascript', 'typescript', 'tsx', 'html', 'css',
   -- No `jsonc` parser exists on the main branch; jsonc filetypes use the json one.
   'json', 'yaml', 'toml',
