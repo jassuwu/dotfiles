@@ -92,15 +92,18 @@ reproducible pin, especially for `nvim-treesitter`, which tracks `main`.
 A missing server is a missing binary on `$PATH`. Never `:MasonInstall`.
 
 ```
-brew:   lua-language-server gopls rust-analyzer tree-sitter fd stylua gofumpt \
+brew:   lua-language-server gopls rust-analyzer tree-sitter-cli fd stylua gofumpt \
         goimports taplo marksman shfmt ruff clang-format
 npm -g: @vtsls/language-server @tailwindcss/language-server \
         vscode-langservers-extracted @biomejs/biome prettier basedpyright
 ```
 
 `clangd` is Apple's. `clang-format` is a separate formula. It is not in CLT.
-`tree-sitter` must come from Homebrew. The npm CLI fails silently on the
-`main` branch.
+The tree-sitter CLI must come from Homebrew. The npm CLI fails silently on the
+`main` branch. The formula is `tree-sitter-cli`, **not** `tree-sitter` — the
+latter is now the library alone, so installing it leaves no `tree-sitter` on
+`$PATH` and every parser dies at `Error during "tree-sitter build": ENOENT`
+while still reporting a successful download.
 
 `rustfmt` lives in `~/.cargo/bin`. `lua/options.lua` prepends that to `$PATH`
 so Ghostty does not have to source cargo first.
