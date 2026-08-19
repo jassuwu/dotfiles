@@ -13,9 +13,7 @@ local map = vim.keymap.set
 map('n', 'gd', vim.lsp.buf.definition, { desc = 'LSP: definition' })
 
 -- File explorer: open the parent directory as an editable buffer.
--- `<leader>pv` is the old netrw map; `-` is oil's own convention.
 map('n', '-', '<cmd>Oil<cr>', { desc = 'Open parent directory' })
-map('n', '<leader>pv', '<cmd>Oil<cr>', { desc = 'Open parent directory' })
 
 -- Pickers. `<C-p>` / `<leader>ff` match the old telescope maps.
 local fzf = require('fzf-lua')

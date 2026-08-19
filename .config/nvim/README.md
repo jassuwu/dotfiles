@@ -19,7 +19,7 @@ Still here, just thinner: format on save, git hunks, find/grep, file tree, rose-
 | --- | --- |
 | `<C-p>` | find files (fzf-lua, was telescope) |
 | `<leader>ff` | live grep |
-| `<leader>pv` or `-` | parent directory (oil, was netrw) |
+| `-` | parent directory (oil, was netrw) |
 | `<leader>f` | format |
 | `<leader>s` | replace word under cursor |
 | `<leader>y` / `<leader>p` / `<leader>d` | clipboard / black-hole paste / delete |
@@ -31,6 +31,7 @@ Not oversights — do not re-add them:
 
 - `<C-f>` ran `tmux-sessionizer`, which is not installed and has not been since
   the move to Ghostty + Aerospace. Workspace switching lives in Aerospace now.
+- `<leader>pv` duplicated `-`. One action, one key.
 
 ## Maps that moved
 
