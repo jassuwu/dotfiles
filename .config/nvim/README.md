@@ -32,6 +32,7 @@ Not oversights — do not re-add them:
 - `<C-f>` ran `tmux-sessionizer`, which is not installed and has not been since
   the move to Ghostty + Aerospace. Workspace switching lives in Aerospace now.
 - `<leader>pv` duplicated `-`. One action, one key.
+- `<C-j>` / `<C-k>` walked the quickfix list. Core does that with `[q` / `]q`.
 
 ## Maps that moved
 

@@ -42,10 +42,6 @@ map('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
   desc = 'Replace word under cursor',
 })
 
--- Quickfix with zz. Native [q/]q exists but does not recenter.
-map('n', '<C-j>', '<cmd>cprev<CR>zz')
-map('n', '<C-k>', '<cmd>cnext<CR>zz')
-
 -- Location list. Quickfix has native [q/]q; the loclist has no equivalent.
 map('n', '<leader>j', '<cmd>lprev<CR>zz')
 map('n', '<leader>k', '<cmd>lnext<CR>zz')
