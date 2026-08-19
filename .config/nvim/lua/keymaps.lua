@@ -40,7 +40,6 @@ map('n', '<leader>Y', [["+Y]])
 map({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete to black hole' })
 map('i', '<C-c>', '<Esc>')
 map('n', 'Q', '<nop>')
-map('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 map('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
   desc = 'Replace word under cursor',
 })

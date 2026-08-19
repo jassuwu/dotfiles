@@ -22,9 +22,15 @@ Still here, just thinner: format on save, git hunks, find/grep, file tree, rose-
 | `<leader>pv` or `-` | parent directory (oil, was netrw) |
 | `<leader>f` | format |
 | `<leader>s` | replace word under cursor |
-| `<C-f>` | tmux-sessionizer |
 | `<leader>y` / `<leader>p` / `<leader>d` | clipboard / black-hole paste / delete |
 | `J`/`K` in visual | move selection |
+
+## Dropped on purpose
+
+Not oversights — do not re-add them:
+
+- `<C-f>` ran `tmux-sessionizer`, which is not installed and has not been since
+  the move to Ghostty + Aerospace. Workspace switching lives in Aerospace now.
 
 ## Maps that moved
 
