@@ -13,6 +13,7 @@ vim.lsp.enable({
   'ruff',
   'clangd',
   'rust_analyzer',
+  'jdtls',
   'taplo',
   'marksman',
   'jsonls',
