@@ -23,8 +23,13 @@ vim.lsp.enable({
 })
 
 -- Diagnostic signs can only be configured here; :sign-define was removed in 0.12.
+-- Held in a local so <leader>l can put it back verbatim. Reading it off
+-- vim.diagnostic.config() and writing it back turns it into a bare `true`,
+-- which silently loses the prefix after one round trip.
+local virtual_text = { prefix = '●' }
+
 vim.diagnostic.config({
-  virtual_text = { prefix = '●' },
+  virtual_text = virtual_text,
   virtual_lines = false, -- toggled on demand, see <leader>l
   underline = true,
   severity_sort = true,
@@ -42,8 +47,11 @@ vim.diagnostic.config({
 -- virtual_lines is the native replacement for lsp_lines.nvim and covers most of what
 -- trouble.nvim was used for. It is loud, so it toggles rather than defaulting on.
 vim.keymap.set('n', '<leader>l', function()
-  local enabled = vim.diagnostic.config().virtual_lines
-  vim.diagnostic.config({ virtual_lines = not enabled, virtual_text = enabled })
+  local lines = vim.diagnostic.config().virtual_lines
+  vim.diagnostic.config({
+    virtual_lines = not lines,
+    virtual_text = lines and virtual_text or false,
+  })
 end, { desc = 'Toggle diagnostic virtual lines' })
 
 vim.api.nvim_create_autocmd('LspAttach', {
