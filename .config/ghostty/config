@@ -8,3 +8,6 @@ background-blur = 10
 
 window-padding-x = 6
 window-padding-y = 6
+
+# fzf-lua and other TUIs bind Alt-<key>; without this, Option composes characters (Option+q = œ).
+macos-option-as-alt = true
