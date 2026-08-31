@@ -29,15 +29,11 @@ vim.pack.add({
   { src = 'https://github.com/nvim-mini/mini.ai' },
   { src = 'https://github.com/nvim-mini/mini.pairs' },
   { src = 'https://github.com/windwp/nvim-ts-autotag' },
-  { src = 'https://github.com/rose-pine/neovim', name = 'rose-pine' },
+  { src = 'https://github.com/jassuwu/lichen' },
 })
 
 -- Colorscheme first so later highlight overrides stick.
-require('rose-pine').setup({
-  variant = 'main',
-  styles = { italic = false, transparency = false },
-})
-vim.cmd.colorscheme('rose-pine')
+vim.cmd.colorscheme('lichen')
 
 require('mini.surround').setup()
 require('mini.ai').setup()

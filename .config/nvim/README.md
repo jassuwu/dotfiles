@@ -11,7 +11,7 @@ servers were installed on this machine. A new machine needs the toolchain below.
 Gone: lazy, mason, nvim-cmp, LuaSnip, telescope, neogit, diffview, trouble,
 fidget, three colorschemes, the `<leader>v*` LSP maps.
 
-Still here, just thinner: format on save, git hunks, find/grep, file tree, rose-pine.
+Still here, just thinner: format on save, git hunks, find/grep, file tree, lichen.
 
 ## Maps you already know
 
